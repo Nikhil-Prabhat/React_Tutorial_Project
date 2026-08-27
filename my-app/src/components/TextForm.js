@@ -5,12 +5,14 @@ export default function TextForm(props) {
         console.log("Uppercase button was clicked");
         let updatedText = text.toUpperCase();
         setText(updatedText);
+        props.showAlert("Converted to Uppercase !", "success");
     };
 
     const handleLowercaseClick = () => {
         console.log("Lowercase button was clicked");
         let updatedText = text.toLowerCase();
         setText(updatedText);
+        props.showAlert("Converted to Lowercase !", "success");
     }
 
     const handleOnChange = (event) => {
@@ -30,7 +32,7 @@ export default function TextForm(props) {
                         onChange={handleOnChange}
                         id="myBox"
                         rows="8"
-                        style={{ backgroundColor: props.mode === 'dark' ? '#1b1b67' : 'light', color: props.mode === 'dark' ? 'black' : 'white' }}
+                        style={{ backgroundColor: props.mode === 'dark' ? '#babad4' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }}
                     ></textarea>
                 </div>
 
