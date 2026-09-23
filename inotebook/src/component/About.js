@@ -3,14 +3,17 @@ import NoteContext from '../context/notes/NoteContext'
 import noteContext from '../context/notes/NoteContext'
 
 export default function About() {
-    const userContext = useContext(noteContext);
+    // This was to understand context   
+    /* const userContext = useContext(noteContext);
     useEffect(() => {
         userContext.update()
-    }, []);
+    }, []); */
 
     return (
         <div>
-            This is About {userContext.state.name} who studies in {userContext.state.class}
+            {/* This was to understand context */}
+            {/* This is About {userContext.state.name} who studies in {userContext.state.class} */}
+            This is About
         </div>
     )
 }
