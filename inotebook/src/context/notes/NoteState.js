@@ -24,8 +24,24 @@ const NoteState = (props) => {
         </NoteContext.Provider>
     ) */
 
+    const initialNotes = [
+        {
+            "id": "1",
+            "title": "My title",
+            "user": "user_1",
+            "description": "please wake up early for user1"
+        },
+        {
+            "id": "2",
+            "title": "My title",
+            "user": "user_2",
+            "description": "please wake up early for user 2"
+        }]
+    const [notes, setNotes] = useState(initialNotes);
+
+    // The value in the provider is exposed to everyone.
     return (
-        <NoteContext.Provider>
+        <NoteContext.Provider value={{ notes, setNotes }}>
             {props.children}
         </NoteContext.Provider>
     )
